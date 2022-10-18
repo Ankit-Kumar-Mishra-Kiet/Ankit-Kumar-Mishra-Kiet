@@ -1,0 +1,33 @@
+//Name: Ankit Kumar MIshra
+//Roll no. 2100290120030
+//Program to sort array in ascending order.
+
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+int a[10],i,j,n,temp;
+printf("Enter the number of elements in array  ");
+scanf("%d",&n);
+printf("Enter the elements \n");
+for(i=0;i<n;i++)
+scanf("%d",&a[i]);
+
+//For sorting
+for(j=0;j<n;j++)     //Loop for every element
+{for(i=0;i<n-1;i++)   //Loop for shifting every max element to extreme left  
+
+{
+if(a[i]>a[i+1])
+{temp=a[i];
+a[i]=a[i+1];
+a[i+1]=temp;
+}
+}}
+//sorted array
+printf("sorted array is\n");
+for(i=0;i<n;i++)
+printf(" %d ",a[i]);
+getch();
+}
